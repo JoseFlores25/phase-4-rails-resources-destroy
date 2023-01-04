@@ -34,7 +34,7 @@ class BirdsController < ApplicationController
   end
 
   # PATCH /birds/:id/like
-  def increment_likes
+  def destroy
     bird = Bird.find_by(id: params[:id])
     if bird
       bird.update(likes: bird.likes + 1)
